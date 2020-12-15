@@ -24,9 +24,15 @@
         
 // Exercise 2: Write a JavaScript exercise to get the extension of a filename
 
+ function typeOfFile() {
 
-const fileType = document.getElementsById("filetype").value;
-
+    const filePath = document.getElementById("filetype").value;
+    const indexNumber = filePath.lastIndexOf(".");
+    const fileType = filePath.slice(indexNumber);
+    
+    document.getElementById("result2").innerHTML = fileType;
+    
+ }
 
      
 /* Exercise 3: Write a JavaScript program to replace every character in a
