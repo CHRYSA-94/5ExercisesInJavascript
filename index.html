@@ -12,9 +12,10 @@
         <form action=""></form>
           <label for="num1">Give a number</label>
           <input type="number" class="input-box" id="num1" >
-          <label for="num2">Give a number</label>
+          <label for="num2">Give one more number</label>
           <input type="number" class="input-box" id="num2">
           <button onclick= "isNumber100()"> Click me! </button>
+          <h3>Is the sum of two numbers = 100 or one of both = 100 ?</h3>
           <p id= "result1"></p>
         </form>
     </section>
@@ -27,13 +28,23 @@
     </section>
     <section class= "exercise-three">
         <h2>Exercise 3</h2>
+        <label for="randomString">Enter text</label>
+        <input type="text" class="input-box" id="randomString1">
+        <button onclick= "nextLetter()"> Click me! </button>
+        <p id= "result3"></p>
     </section>
     <section class= "exercise-four">
         <h2>Exercise 4</h2>
+        <h3> mm-dd-yyyy , mm/dd/yyyy</h3>
+        <div id="date"></div>
     </section>
     <section class= "exercise-five">
         <h2>Exercise 5</h2>
+        <input type="text" class="input-box" id="randomString2">
+        <button onclick= "randomText()"> Click me! </button>
+        <p id= "result5"></p>
     </section>
+
     <script src="script.js"></script>
 </body>
 </html>
