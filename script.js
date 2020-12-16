@@ -36,24 +36,31 @@
      
 /* Exercise 3: Write a JavaScript program to replace every character in a
         given string with the character following it in the alphabet */
+
     function nextLetter() {
        const text = document.getElementById("randomString1").value.toLowerCase().split("");
+       //.split("")
        const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-       let x ="";
+       const textArray =[];
+
         
        for (let i = 0; i < text.length; i++ ){
            for (let j=0 ; j < alphabet.length ; j++) {
                if (text[i] === alphabet[j] ) {
-                x += text.replace(text[i] , alphabet[j+1]);
-                console.log(x);
-                // x += alphabet[j+1];
-               }
+                  if (text[i] ==="z") {
+                    textArray.push("a");
+                  }
+                  else{
+                    textArray.push(alphabet[j +1]);
+                  }
+               
+                }
            }
           
-
        }
-        //console.log(x);
-    
+       const textString = textArray.toString();
+       const finalText = textString.replace(/,/g, "")
+       document.getElementById("result3").innerHTML = finalText;
     }
     
       
