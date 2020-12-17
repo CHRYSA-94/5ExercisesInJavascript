@@ -12,6 +12,10 @@ string is returned.*/
  
    document.getElementById("result1").innerHTML = (arr.length <= 3) ? `${str}`:`${threeLetters + str + threeLetters}` ;
 }
+
+
+//Costas
+const makeNewString = (str) => str.length < 3 ? str :  str.slice(0, 3) + str.slice(-3); 
       
 /*Exercise 2: Write a JavaScript program to extract the first half of a
 string of even length.*/
@@ -24,6 +28,9 @@ function ex2(){
 
 }
 
+//Costas
+const firstHalf = (str) => str.slice(0, str.length / 2);
+
 /*Exercise 3: Write a JavaScript program to concatenate two strings except
 their first character.*/
 
@@ -35,6 +42,10 @@ function ex3() {
     document.getElementById("result3").innerHTML = `${str1.slice(1).join("")}${str2.slice(1).join("")}`
 
 }
+
+
+//Costas
+const concatenate = (str1, str2) => str1.slice(1) + str2.slice(1);
 
 /*Exercise 4: Given two values, write a JavaScript program to find out
 which one is nearest to 100*/
@@ -50,6 +61,8 @@ function ex4(){
     document.getElementById("result4").innerHTML = (Number(finalNum1) < Number(finalNum2)) ? `${num1}` :`${num2}` ;
 }
 
+//Costas
+const closetTo100 = (a,b) => (100 -a) < (100 -b) ? a : b;
       
 /*Exercise 5: Write a JavaScript program to check a given string contains
 2 to 4 occurrences of a specified character.*/
@@ -96,3 +109,7 @@ str5.forEach(char => {
 
 
 }
+
+//Costas
+const countChars = (str, char) => str.split('').filter(ch => ch === char).length;
+const contains2To4 = (str, char) => countChars(str, char) >= 2 && countChars(str, char) <= 4;
