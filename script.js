@@ -36,10 +36,63 @@ function ex3() {
 
 }
 
-      
 /*Exercise 4: Given two values, write a JavaScript program to find out
 which one is nearest to 100*/
+
+function ex4(){
+
+    const num1 = document.getElementById( "num1").value;
+    const num2 = document.getElementById( "num2").value;
+
+    const finalNum1 = (num1 - 100 > 0) ? `${num1}`:`${(num1 - 100) * -1}` ;
+    const finalNum2 = (num2 - 100 > 0) ? `${num2}`:`${(num2 - 100) * -1}` ;
+
+    document.getElementById("result4").innerHTML = (Number(finalNum1) < Number(finalNum2)) ? `${num1}` :`${num2}` ;
+}
+
       
 /*Exercise 5: Write a JavaScript program to check a given string contains
 2 to 4 occurrences of a specified character.*/
 
+function ex5(){
+    
+    const str5 = document.getElementById("str5").value.split("");
+    const num = [];
+    const str = [];
+
+str5.forEach(char => {
+    if ( isNaN(Number(char)) == false ) {
+    num.push(char);
+}
+    else {
+        str.push(char);
+    }
+});
+
+   const firstHalf = num.sort() ;
+   const secHalf = str.sort();
+
+   const wholeString = firstHalf.concat(secHalf);
+    
+
+   let times = 0;
+   let timesArr= [];
+
+   for (let i=0; i < wholeString.length; i++){
+      if ( wholeString[i] === wholeString[i+1]) {
+          //to brak edw giati den doulevei?
+        if (times > 3) { break;}
+            
+         times++
+         timesArr.push(times);
+         console.log(times);
+      }
+      else { times =0;}
+      
+   }
+ 
+    document.getElementById("result5").innerHTML = timesArr.some(ch => ch >= 1 && ch <= 3);
+  
+
+
+}
