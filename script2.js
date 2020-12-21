@@ -6,6 +6,10 @@ function leapYear(){
   const year = document.getElementById("year").value ;
   document.getElementById("result1").innerHTML = (new Date (year, 1, 29).getMonth() == 1) ? `Leap Year` :`Not Leap Year`;
 }
+
+//Costas
+/* ????? */
+const isLeapYear = (year) =>  year % 4 ? 'Not a Leap Year' : 'It is leap year';
  
  /*  Exercise 2: Write a JavaScript program to compare two objects to
    determine if the first one contains the same properties as the second
@@ -32,7 +36,14 @@ function leapYear(){
     }
 
    }
- 
+
+   
+
+  //Costas
+  //You do not need to check the order of the properties
+  const objectIsEqual = (objA, objB) => Object.keys(objA).every(key => key in objB);
+  
+
 /*  Exercise 3: Write a JavaScript program to convert a comma-separated
    values (CSV) string to a 2D array. A new line indicates a new row in the
    array. Example input: abc,def,ghi jkl,mno,pqr stu,vwx,yza */
@@ -46,6 +57,9 @@ function leapYear(){
     console.log(Array2D);
   
   }
+
+  //Costas
+  const parseCSV = (csv) => csv.split('\n').map(row => row.split(','));
 
  /*  Exercise 4: Write a JavaScript program to generate a random hexadecimal
    color code.*/
@@ -64,6 +78,12 @@ function leapYear(){
    document.getElementById("bgColor").style.backgroundColor = hexColor;
 
   }
+
+  //costas
+  const randomNumber = () => Math.floor(Math.random() * 16).toString(16);
+  const randomHexColor = () => '#' + Array.from({length: 6}).map(randomNumber).join('');
+  
+
  /*  Exercise 5: Write a JavaScript function that returns true if the
    provided predicate function returns true for all elements in a
    collection, false otherwise.*/
@@ -78,5 +98,8 @@ function leapYear(){
    
  
     //const res1 = document.getElementById("result5").innerHTML ;
+
+    //Costas
+   //Nice
 
   
