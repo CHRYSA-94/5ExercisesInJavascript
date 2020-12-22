@@ -57,63 +57,11 @@ function countVowels(){
      for (let i =0 ; i < Math.floor(rest / 2); i++){
          arr.push(2)}
      rest %= 2;
-    }
-    if (rest =1){ arr.push(1) }
+    } 
+    if (rest == 1){ arr.push(1) }
  
     document.getElementById("result3").innerHTML = arr.join();
  }
   
 /* Exercise 4: Write a JavaScript function to extract unique characters
  from a string.*/
-
- function ex4(){
-     const str4 = document.getElementById("str4").value;
-
-    // const sortStr4 = str4.sort();
-    // console.log(sortStr4)
-     let unCh= "";
-
-
-     for (let i=0; i < str4.length; i++){
-       if (str4.indexOf(str4[i]) ==-1) {
-         unCh += str4[i]
-       }
-     }
-     console.log(unCh)
-     
-     /*let arr = [];
-
-     for (let i=0; i < sortStr4.length; i++){
-         if ( sortStr4[i] === sortStr4[i+1]) {
-            console.log(sortStr4[i])
-         }
-         else {arr.push( sortStr4[i])}
-      }
-      console.log(arr);*/
-
-     /* for (let i=0; i < sortStr4.length; i++) {
-         for (let j=0; j < arr.length; j++) {
-             if (str4[i] ==arr[j]) {
-                sortStr4.
-             }
-         }
-      }
-
-      arr.forEach( ch => {for (let i=0 ; str4.length; i++) {
-          if( ch == str4[i]){delete str4[ch]}
-      } 
-     })*/
-   //  console.log(str4);
-    // console.log(sortStr4.filter( (l, index) => {if (sortStr4[index] ==sortStr4[index+1]) {console.log(l)}}))
-    // document.getElementById("result4").innerHTML =
- }
-
-/* Exercise 5: Write a JavaScript function to find the first not repeated
- character Example string: 'abacddbec' Expected output: 'e'*/
-
- function ex5(){
-     const str5 = document.getElementById("str5").value.split("");
-     
-     const myFun = (str5,char) => str5.find(ch => ch !== char )
-    // document.getElementById("result5").innerHTML =
- }
