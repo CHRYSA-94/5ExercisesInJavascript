@@ -65,3 +65,26 @@ function countVowels(){
   
 /* Exercise 4: Write a JavaScript function to extract unique characters
  from a string.*/
+
+ function ex4(){
+    const str4 = document.getElementById("str4").value.toLowerCase().split("").sort();
+
+   const unique = str4.filter( (ch,index) => str4[index] != str4[index+1])
+   
+   document.getElementById("result4").innerHTML = unique.join();
+
+}
+
+/* Exercise 5: Write a JavaScript function to find the first not repeated
+character Example string: 'abacddbec' Expected output: 'e'*/
+
+function ex5(){
+    const str5 = document.getElementById("str5").value.toLowerCase().split("");
+
+    console.log(str5)
+    
+              
+
+
+   // document.getElementById("result5").innerHTML =
+}
